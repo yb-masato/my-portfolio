@@ -1,0 +1,289 @@
+/*  本体css*/
+*{
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: メイリオ Medium, Meiriyo Medium, sans-serif;
+  color: #7b7b7b;
+  background-color: #E8EEEC;
+}
+
+.preload * {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+h1  {
+  font-family: メイリオ;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-family: メイリオ;
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ol {
+  padding: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  /* list-style: none; */
+  margin-bottom: 5px;
+}
+
+.flex {
+    display: flex;
+}
+
+.space {
+  justify-content: space-between;
+}
+
+a.blue-link {
+    color: #0b33ff;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+li.red-link{
+  color: red;
+  font-weight: bold;
+}
+
+.background_color{
+  background-color: white;
+  position: relative;
+}
+
+.header_nav{
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  background-color: black;
+  color: white;
+}
+
+.top_logo{
+  font-size: 26px;
+  font-weight: bold;
+  padding: 10px;
+  margin-left: 50px;
+  letter-spacing: 7px;
+}
+
+#nav-drawer {
+  position: relative;
+}
+
+/*チェックボックス等は非表示に*/
+.nav-unshown {
+  display:none;
+}
+
+/*アイコンのスペース*/
+#nav-open {
+  display: inline-block;
+  width: 30px;
+  height: 15px;
+  padding: 20px 50px 20px 0;
+  vertical-align: middle;
+}
+
+#nav-content .profile_top {
+  text-align: center;
+  padding: 10px 0;
+  font-weight: bold;
+  font-size: 18px;
+  border-bottom: 1px solid #ddd;
+}
+
+#nav-content li{
+  width: 100%;
+}
+
+/*チェックがついたら表示させる*/
+#nav-input:checked ~ #nav-close {
+  display: block;
+  opacity: .5;
+}
+
+#nav-input:checked ~ #nav-content {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
+  box-shadow: 6px 0 25px rgba(0,0,0,.15);
+}
+
+@media screen and (min-width:830px) {
+   #nav-drawer {
+     display:none;
+   }
+ }
+
+ @media screen and (max-width:830px) {
+   .open {
+     display:none;
+   }
+ }
+
+
+@media screen and (max-width: 1160px) and (min-width: 830px) {
+
+  .top_logo{
+    font-size: 16px;
+    padding: 15px;
+    margin-left: 20px;
+    letter-spacing: 4px;
+  }
+
+  .hover_blue li{
+    font-size: 14px;
+    padding: 17px 10px;
+  }
+
+  .search_container{
+    width: 160px;
+  }
+}
+
+@media screen and (max-width: 830px) and (min-width: 0px) {
+  .top_logo{
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px;
+    margin-left: 10px;
+    letter-spacing: 3px;
+  }
+
+  .hover_blue li{
+    display: inline-block;
+    width: auto;
+    text-align: center;
+    font-size: 15px;
+    padding: 17px 20px;
+    transition-duration: 0.5s;
+  }
+
+  .hover_blue li:hover{
+    background-color: #4689FF;
+    color: white;
+    cursor: pointer;
+    transition-duration: 0.5s;
+  }
+}
+
+/* プライバシーポリシー本体 */
+.privacy-main {
+  margin-top: 60px;
+  padding: 4% 4%;
+}
+
+#content {
+  padding: 5%;
+}
+
+h3 {
+  padding: 1%;
+  background-color: ivory;
+}
+
+/*footer関連*/
+.footer_wrapper{
+  background-color: #E8EEEC;
+}
+
+.footer_img img{
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+.footer_img{
+  text-align: center;
+  margin: 20px 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.footer_menu{
+  max-width: 1320px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.red-bold{
+  font-weight: bold;
+  color: red;
+}
+
+.about_me{
+  width: 34%;
+  padding: 20px;
+}
+
+.information{
+  width: 33%;
+  padding: 20px;
+}
+
+.information a{
+  font-size: 18px;
+  line-height: 50px;
+}
+
+.information li:hover{
+  cursor: pointer;
+}
+
+.footer_title{
+  font-size: 22px;
+  font-weight: bold;
+  display: inline-block;
+  height: 40px;
+  border-bottom: double 5px gray;
+  margin-bottom: 20px;
+}
+
+.footer_bottom{
+  background-color: #222222;
+  color: white;
+  text-align: center;
+  height: 50px;
+  padding: 10px;
+}
+
+.left_space img{
+  margin-bottom: 10px;
+}
